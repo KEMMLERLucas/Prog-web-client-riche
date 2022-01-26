@@ -34,7 +34,7 @@ let noteFormView = {
             aInfo.classList.add("create_edit_note-hidden");
             let atext=document.querySelector("#form_add_note_text").value;
             let aTitre=document.querySelector("#form_add_note_title").value;
-            note=new note.Note(atext, aTitre);
+            note=new note.Note(aTitre, atext);
             console.log("Titre : "+note.titre);
             console.log("Date : "+note.date);
             console.log("Content : "+note.contenu);
@@ -68,7 +68,7 @@ let mainMenuView ={
         });
     }
 }
-let noteListView ={
+let noteList ={
     tableauNote : [],
     addNote :function (n){
         this.tableauNote.push(n);
@@ -82,9 +82,12 @@ let noteListView ={
     }
 
 }
+let noteListView ={
+
+}
 
 let globalVar ={
-    noteCourante : noteFormView.validate(),
+    //noteCourante : noteFormView.validate(),
     loader : function () {
         window.addEventListener("load", ()=>{
             mainMenuView.addHandler();
