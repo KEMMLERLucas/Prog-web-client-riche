@@ -2,6 +2,7 @@ let a1 = document.querySelector("#add");
 let aInfo = document.querySelector("#noteForm");
 let currentNote=document.querySelector("#currentNoteView");
 let valide = document.querySelector("#form_add_note_valid");
+let listeNote=document.querySelector("#noteListView");
 var note = {
     titre: "titre",
     contenu: "Insérez du contenu",
@@ -83,7 +84,11 @@ let noteList ={
 
 }
 let noteListView ={
-
+    displayItem : function (n){
+        text=`${n.titre}  ${n.date}`;
+        listeNote.appendChild(document.createElement('div'));
+        listeNote.lastChild.
+    }
 }
 
 let globalVar ={
